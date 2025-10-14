@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 18px;
+}
+th, td {
+    border: 1px solid #999;
+    padding: 10px;
+}
+th {
+    background: #ffb6c1;
+}
+
+#about {
+    text-align: center;
+    margin: 40px auto;
+}
+#about img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+#about p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#contact {
+    text-align: center;
+    margin: 40px auto;
+}
+#contact h2 {
+    margin-bottom: 15px;
+}
+#contact input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contact input[type="submit"] {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#contact input[type="submit"]:hover {
+    background: #e75480;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+}

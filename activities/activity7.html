@@ -1,0 +1,129 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f9f9f9;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    button {
+      flex: 1;
+      margin: 0 3px;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #007bff;
+      color: #fff;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 6px 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .done {
+      color: green;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>To-Do Task Manager</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task here">
+
+    <div class="buttons">
+      <button id="addTaskBtn">Add</button>
+      <button id="markAllBtn">Done All</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const addTaskBtn = document.getElementById("addTaskBtn");
+    const markAllBtn = document.getElementById("markAllBtn");
+    const clearBtn = document.getElementById("clearBtn");
+    const taskList = document.getElementById("taskList");
+
+    // Add Task
+    addTaskBtn.addEventListener("click", () => {
+      const taskText = taskInput.value.trim();
+      if (taskText !== "") {
+        const li = document.createElement("li");
+        li.textContent = taskText;
+        taskList.appendChild(li);
+        taskInput.value = "";
+      }
+    });
+
+    // Mark All as Done
+    markAllBtn.addEventListener("click", () => {
+      const items = document.querySelectorAll("#taskList li");
+      items.forEach(item => {
+        item.classList.add("done");
+      });
+    });
+
+    // Clear Completed
+    clearBtn.addEventListener("click", () => {
+      const doneItems = document.querySelectorAll("#taskList li.done");
+      doneItems.forEach(item => {
+        item.remove();
+      });
+    });
+  </script>
+</body>
+</html>

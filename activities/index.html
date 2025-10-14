@@ -1,0 +1,62 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(63, 9, 13);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+
+        }
+        .card {
+            width: 250px;
+            justify-content: center;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 1opx rgb(0, 0, 0, 0);
+            transition: transfer 0.3s ease;
+        }
+        .card:hover{
+            transform: translateY(-10px);
+
+        }
+        .card img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50px;
+            object-fit:cover;
+        }
+        .card p{
+            margin-top: 15px;
+            color: blue;
+            line-height: 1.4;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: opacity 0.3s ease, max-height 0.3 ease;
+        }
+        .card:hover p{
+            opacity: 1;
+            max-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+       <img src="picture.jpg" alt="">  
+        <p>this is a test for you eye and fast hand</p>
+    </div>
+
+</body>
+</html>
